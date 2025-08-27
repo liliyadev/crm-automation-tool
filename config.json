@@ -1,0 +1,5 @@
+{
+    "crm_api_url": "https://api.yourcrm.com/update",
+    "auth_token": "YOUR_TOKEN"
+  }
+  
