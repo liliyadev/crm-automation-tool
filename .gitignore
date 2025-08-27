@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 config.json
 *.pyc
 __pycache__/
+=======
+config.json
+*.pyc
+__pycache__/
+>>>>>>> d8d846c534883e3850e410dbb2beaf5aa4d2e649
