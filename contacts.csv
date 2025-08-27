@@ -1,4 +1,4 @@
-"name,email,engagement,revenue,industry_fit"
-"Alice Smith,alice@example.com,85,12000,90"
-"Bob Jones,bob@example.com,60,8000,70"
-"Carol Lee,carol@example.com,95,15000,95"
+name,email,engagement,revenue,industry_fit,score
+Alice Smith,alice@example.com,85,12000,90,88.5
+Bob Jones,bob@example.com,60,8000,70,68.0
+Carol Lee,carol@example.com,95,15000,95,93.0
