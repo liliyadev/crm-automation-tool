@@ -2,13 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-min_score = st.slider(
-    "Minimum Lead Score",
-    int(df["score"].min()),
-    int(df["score"].max()),
-    value=int(df["score"].min()),
-    key="min_score"
-)
+
 
 # ─── 1) Load & Score Your DataFrame ───
 df = pd.read_csv("contacts.csv")
@@ -17,6 +11,14 @@ df["score"] = (
   + (df["revenue"] / df["revenue"].max() * 100) * 0.3
   + df["industry_fit"] * 0.3
 ).round(1)
+
+min_score = st.slider(
+    "Minimum Lead Score",
+    int(df["score"].min()),
+    int(df["score"].max()),
+    value=int(df["score"].min()),
+    key="min_score"
+)
 
 # ─── 2) Page Setup & Top Metrics ───
 st.set_page_config(page_title="CRM Dashboard", layout="wide")
