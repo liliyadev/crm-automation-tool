@@ -34,29 +34,30 @@ if "revenue_range" not in st.session_state:
 if "eng_threshold" not in st.session_state:
     st.session_state.eng_threshold = int(df["engagement"].min())
 
-# ─── 5) Interactive Filters (one slider per key) ───
+# ─── 5) Interactive Filters ───
 st.subheader("Filters")
 
+# — slider reads/writes st.session_state.min_score
 min_score = st.slider(
     "Minimum Lead Score",
     int(df["score"].min()),
     int(df["score"].max()),
-    key="min_score"               # reads/writes st.session_state.min_score
+    key="min_score"
 )
 
+# — slider reads/writes st.session_state.revenue_range
 revenue_range = st.slider(
     "Revenue Range",
     int(df["revenue"].min()),
     int(df["revenue"].max()),
-    value=st.session_state.revenue_range,
     key="revenue_range"
 )
 
+# — slider reads/writes st.session_state.eng_threshold
 eng_threshold = st.slider(
     "Minimum Engagement (%)",
     int(df["engagement"].min()),
     int(df["engagement"].max()),
-    value=st.session_state.eng_threshold,
     key="eng_threshold"
 )
 
