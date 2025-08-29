@@ -1,0 +1,6 @@
+[build]
+  command   = "hugo --gc --minify"
+  publish   = "public"
+
+[context.production.environment]
+  HUGO_VERSION = "0.102.3"     # replace with the version you use locally
